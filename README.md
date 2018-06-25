@@ -174,17 +174,26 @@ Fonte: [HowToDoInJava](https://howtodoinjava.com/spring/spring-cloud/spring-clou
 Para executar os projetos a seguir é necessário a instalação do [Apache Maven](https://maven.apache.org/download.cgi)
 
 ```
+
+
+$ git clone https://github.com/diego91964/demo-influx-springboot.git
+$ cd demo-influx-springboot
 $ mvn clean install -f service-discovery
 $ mvn clean install -f service-metrics-influx
 $ mvn clean install -f mservice-1
 $ mvn clean install -f mservice-2
 $ mvn clean install -f mservice-3
+$ java -jar service-discovery/target/service-discovery.jar
+$ java -jar mservice-1/target/mservice-1.jar
+$ java -jar mservice-2/target/mservice-3.jar
+$ java -jar mservice-3/target/mservice-2.jar
+$ java -jar service-metrics-influx/target/service-metrics-influx.jar
 
 ```
 
 ----
 
-## Criando Dasource Grafana
+## Criando Datasource Grafana
 
 <img src="img/grafana-datasource.png">
 
