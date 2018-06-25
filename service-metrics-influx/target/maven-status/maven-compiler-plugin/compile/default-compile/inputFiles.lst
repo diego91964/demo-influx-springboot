@@ -1,0 +1,16 @@
+/home/diego/dev/repo/git/demo-iftm-2018/influxdb/service-metrics-influx/src/main/java/br/uaijug/service/metrics/influxdb/IInfluxDbService.java
+/home/diego/dev/repo/git/demo-iftm-2018/influxdb/service-metrics-influx/src/main/java/br/uaijug/service/metrics/exceptions/ENotFound.java
+/home/diego/dev/repo/git/demo-iftm-2018/influxdb/service-metrics-influx/src/main/java/br/uaijug/service/metrics/discovery/IDiscoveryService.java
+/home/diego/dev/repo/git/demo-iftm-2018/influxdb/service-metrics-influx/src/main/java/br/uaijug/service/metrics/restclient/RestClient.java
+/home/diego/dev/repo/git/demo-iftm-2018/influxdb/service-metrics-influx/src/main/java/br/uaijug/service/metrics/configuration/Applications.java
+/home/diego/dev/repo/git/demo-iftm-2018/influxdb/service-metrics-influx/src/main/java/br/uaijug/service/metrics/exceptions/EJsonBad.java
+/home/diego/dev/repo/git/demo-iftm-2018/influxdb/service-metrics-influx/src/main/java/br/uaijug/service/metrics/discovery/DiscoveryService.java
+/home/diego/dev/repo/git/demo-iftm-2018/influxdb/service-metrics-influx/src/main/java/br/uaijug/service/metrics/exceptions/EHttpError.java
+/home/diego/dev/repo/git/demo-iftm-2018/influxdb/service-metrics-influx/src/main/java/br/uaijug/service/metrics/entities/Metrics.java
+/home/diego/dev/repo/git/demo-iftm-2018/influxdb/service-metrics-influx/src/main/java/br/uaijug/service/metrics/core/Core.java
+/home/diego/dev/repo/git/demo-iftm-2018/influxdb/service-metrics-influx/src/main/java/br/uaijug/service/metrics/influxdb/InfluxDbService.java
+/home/diego/dev/repo/git/demo-iftm-2018/influxdb/service-metrics-influx/src/main/java/br/uaijug/service/metrics/exceptions/ERouteToAPI.java
+/home/diego/dev/repo/git/demo-iftm-2018/influxdb/service-metrics-influx/src/main/java/br/uaijug/service/metrics/configuration/Service.java
+/home/diego/dev/repo/git/demo-iftm-2018/influxdb/service-metrics-influx/src/main/java/br/uaijug/service/metrics/Application.java
+/home/diego/dev/repo/git/demo-iftm-2018/influxdb/service-metrics-influx/src/main/java/br/uaijug/service/metrics/exceptions/HttpClientError.java
+/home/diego/dev/repo/git/demo-iftm-2018/influxdb/service-metrics-influx/src/main/java/br/uaijug/service/metrics/restclient/IRestClient.java

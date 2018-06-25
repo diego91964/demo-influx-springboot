@@ -1,0 +1,13 @@
+{
+  "groups": [{
+    "name": "application",
+    "type": "br.uaijug.service.metrics.configuration.Applications",
+    "sourceType": "br.uaijug.service.metrics.configuration.Applications"
+  }],
+  "properties": [{
+    "name": "application.services",
+    "type": "java.util.List<br.uaijug.service.metrics.configuration.Service>",
+    "sourceType": "br.uaijug.service.metrics.configuration.Applications"
+  }],
+  "hints": []
+}

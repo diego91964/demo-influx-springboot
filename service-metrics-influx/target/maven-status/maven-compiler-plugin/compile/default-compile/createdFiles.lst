@@ -1,0 +1,17 @@
+br/uaijug/service/metrics/configuration/Applications.class
+br/uaijug/service/metrics/entities/Metrics.class
+META-INF/spring-configuration-metadata.json
+br/uaijug/service/metrics/exceptions/ENotFound.class
+br/uaijug/service/metrics/core/Core.class
+br/uaijug/service/metrics/restclient/IRestClient.class
+br/uaijug/service/metrics/restclient/RestClient.class
+br/uaijug/service/metrics/configuration/Service.class
+br/uaijug/service/metrics/exceptions/EJsonBad.class
+br/uaijug/service/metrics/influxdb/InfluxDbService.class
+br/uaijug/service/metrics/influxdb/IInfluxDbService.class
+br/uaijug/service/metrics/exceptions/ERouteToAPI.class
+br/uaijug/service/metrics/Application.class
+br/uaijug/service/metrics/discovery/DiscoveryService.class
+br/uaijug/service/metrics/discovery/IDiscoveryService.class
+br/uaijug/service/metrics/exceptions/HttpClientError.class
+br/uaijug/service/metrics/exceptions/EHttpError.class
