@@ -102,7 +102,7 @@ $ wget https://s3-us-west-2.amazonaws.com/grafana-releases/release/grafana-5.1.4
 
 $ tar -zxvf grafana-5.1.4.linux-x64.tar.gz
 
-$
+$ ./grafana-5.1.4.linux-x64/grafana-5.1.4/bin/grafana-server
 
 
 ```
@@ -196,9 +196,10 @@ Importar arquivo grafana/dashboard.json no grafana
 
 <img src="img/grafana-import.png">
 
+Créditos: [ypvillazon](https://github.com/ypvillazon)
+
 ----
 
 ## Demo Dashboard
-
 
 <img src="img/grafana-demo-2.png">
