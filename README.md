@@ -1,3 +1,4 @@
+
 # Prática
 
 
@@ -52,7 +53,124 @@ docker run -d -p 8083:8083 -p 8086:8086 --net=influxdb -v $PWD/influxdb:/var/lib
 
 ----
 
+## InfluxDB - Conceitos
 
+
+Antes de começarmos a inserir ou buscar dados dentro do InfluxDB é muito interessante que entendamos os conceitos do banco.
+
+
+----
+
+## Conceitos - Database
+
+Um Database consiste em um container lógico para o usuário, com políticas de retenção, queries contínuas e dados isolados.
+
+----
+
+## Conceitos - Duration
+
+É o tempo de duração de um dado a partir da inserção. [Documentação](https://docs.influxdata.com/influxdb/v1.5/query_language/spec/#durations)
+
+
+----
+
+## Conceitos - Field
+
+É um par chave (field key) e valor (field value) que pode ser armazenado. Mas, um field não poderá ser indexado pelo InfluxDB.
+
+
+----
+
+## Conceitos - Field Set
+
+<img src="img/field-set-influxdb.jpeg">
+
+Fonte: [An introduction to InfluxDB](https://www.linkedin.com/pulse/introduction-influxdb-kristof-bruylants)
+
+
+
+----
+
+## Conceitos - Tag
+
+É um par chave valor que armazena metadados.
+
+
+----
+
+## Conceitos - TagSet
+
+<img src="img/tag-set-influxdb.jpeg">
+
+Fonte: [An introduction to InfluxDB](https://www.linkedin.com/pulse/introduction-influxdb-kristof-bruylants)
+
+----
+
+## Conceitos - Function
+
+São funções de [agregação](https://docs.influxdata.com/influxdb/v1.5/query_language/functions/#aggregations),
+ [transformação](https://docs.influxdata.com/influxdb/v1.5/query_language/functions/#transformations) e [seleção](https://docs.influxdata.com/influxdb/v1.5/query_language/functions/#selectors).
+
+
+----
+
+## Conceitos - Measurement
+
+Consiste na parte do InfluxDB que define os field (Parte principal do InfluxDB).
+
+
+----
+
+## Conceitos - Series
+
+<img src="img/measurement-influxdb.jpeg">
+
+Fonte: [An introduction to InfluxDB](https://www.linkedin.com/pulse/introduction-influxdb-kristof-bruylants)
+
+----
+
+## Conceitos - Point
+
+<img src="img/points-influxdb.jpeg">
+
+Fonte: [An introduction to InfluxDB](https://www.linkedin.com/pulse/introduction-influxdb-kristof-bruylants)
+
+
+----
+
+## Conceitos - Node
+
+Cada instância do InfluxDB executada é chamada de Node.
+
+
+----
+
+## Conceitos - Query
+
+É uma operação de busca no banco.
+
+```
+SELECT <field_key>[,<field_key>,<tag_key>] FROM <measurement_name>[,<measurement_name>]
+
+SELECT *   Retorna todos fields e tags.
+
+SELECT "<field_key>"   Retorna field específico.
+
+SELECT "<field_key>","<field_key>"   Retorna mais de um field.
+
+SELECT "<field_key>","<tag_key>"  Retorna um field específico e uma tag. Quando uma clausula select inclui uma tag, deve incluir um field.
+
+```
+
+
+----
+
+## Conceitos - Schema
+
+Os dados são organizados semanticamente utilizando um schema.
+
+
+----
 ## InfluxDb - Rest API
 
 O InfluxDB possui uma api rest que permite executar todos os comandos através do curl.
@@ -98,12 +216,8 @@ curl -i -XPOST 'http://localhost:8086/query?q=select+threads+from+microservice_s
 A web api do influxDb permite uma visualização muito básica dos dados. Então, precisamos de alguma ferramenta de exibição de Time Series, para este exemplo utilizaremos a ferramenta [Grafana](https://grafana.com/).
 
 ```
-$ wget https://s3-us-west-2.amazonaws.com/grafana-releases/release/grafana-5.1.4.linux-x64.tar.gz
-
-$ tar -zxvf grafana-5.1.4.linux-x64.tar.gz
-
-$ ./grafana-5.1.4.linux-x64/grafana-5.1.4/bin/grafana-server
-
+wget https://s3-us-west-2.amazonaws.com/grafana-releases/release/grafana-5.1.4.linux-x64.tar.gz
+tar -zxvf grafana-5.1.4.linux-x64.tar.gz
 
 ```
 
@@ -174,8 +288,6 @@ Fonte: [HowToDoInJava](https://howtodoinjava.com/spring/spring-cloud/spring-clou
 Para executar os projetos a seguir é necessário a instalação do [Apache Maven](https://maven.apache.org/download.cgi)
 
 ```
-
-
 $ git clone https://github.com/diego91964/demo-influx-springboot.git
 $ cd demo-influx-springboot
 $ mvn clean install -f service-discovery
@@ -212,3 +324,57 @@ Créditos: [ypvillazon](https://github.com/ypvillazon)
 ## Demo Dashboard
 
 <img src="img/grafana-demo-2.png">
+
+----  ----
+
+# Prática - Neo4j
+
+
+Pense no seguinte cenário: Você elaborou uma aplicação extremamente segura, mas, como parte desta segurança fez um sistema de logs capaz de armazenar grande parte dos estados da aplicação.
+
+
+----
+
+
+## Problema
+
+Ter uma grande massa de dados é algo muito bom, desde que você nunca precise dela...
+
+----
+
+## Dados armazenados
+
+
+<img src="img/neo4j-dados-selecionados.png">
+
+
+----
+
+## Perguntas - Parte 1
+
+* Qual ip um determinado usuário utilizou para acessar um app específico?
+* Quais usuários utilizaram um ip?
+* Quais serviços foram utilizados de uma aplicação?
+
+----
+
+## Perguntas - Parte 2
+
+* Qual o maior tempo de resposta de uma requisição?
+* Qual serviço é o mais 'pesado' de uma aplicação?
+* Quais são os parâmetros passados para um serviço?
+
+
+----
+
+## Como ficaria em SQL ?
+
+<img src="img/neo4j-dados-sql.png" width = "50%">
+
+----
+
+## Como ficaria utilizando grafo?
+
+
+
+<img src="img/neo4j-dados-estrutura.png" width = "50%">
